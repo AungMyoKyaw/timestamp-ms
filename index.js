@@ -7,4 +7,6 @@ timeStampMs.get('/:time',function(req,res){
     res.json(time(data.time));
 });
 timeStampMs.use('/',express.static(__dirname+'/public'));
-timeStampMs.listen(8080);
+timeStampMs.listen(8080,function(){
+    console.log('OK');
+});
